@@ -1,0 +1,6 @@
+50px margin left/right
+
+colours:
+main blue: #283A8D
+
+fonts:
