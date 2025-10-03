@@ -6,6 +6,20 @@
       "type": "npm",
       "script": "start",
       "isBackground": true,
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "options": {
+        "statusbar": {
+          "hide": false
+        }
+      },
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",
@@ -18,6 +32,9 @@
             "regexp": "bundle generation complete"
           }
         }
+      },
+      "runOptions": {
+        "instanceLimit": 1
       }
     },
     {
@@ -37,6 +54,20 @@
           }
         }
       }
+    },
+    {
+      "label": "terminate: npm: start",
+      "type": "shell",
+      "command": "echo",
+      "args": ["Terminating ng serve..."],
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      },
+      "dependsOn": []
     }
   ]
 }
