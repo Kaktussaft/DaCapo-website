@@ -1,0 +1,32 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #283A8D;
+  margin: 0;
+  padding: 20px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  width: 40%;
+}
+.footer-item{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.footer-note{
+  color: white;
+  margin-top: 10px;
+}
+.instagram-link{
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
