@@ -19,7 +19,7 @@ export class NavigationComponent {
   navigationItems = [
     {
       label: 'ÜBER UNS',
-      // route: `/${ROUTES.HOME}`,
+      route: `/${ROUTES.HOME}`,
       key: 'about',
       dropdown: [
         { label: 'Da Capo al Fine', route: `/${ROUTES.DA_CAPO_AL_FINE}` },
