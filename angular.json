@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DaCapo-website": {
+    "Da-Capo-Website": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "DaCapo-website:build:production"
+              "buildTarget": "Da-Capo-Website:build:production"
             },
             "development": {
-              "buildTarget": "DaCapo-website:build:development"
+              "buildTarget": "Da-Capo-Website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,8 +93,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

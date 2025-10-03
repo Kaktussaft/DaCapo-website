@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   background-color: #283A8D;
-  margin: 0;
-  padding: 20px 0;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  height: 110px;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
 .instagram-container {
@@ -23,6 +23,7 @@
 .instagram-container:hover {
   background-image: url('/instagram-coloured.svg');
 }
+
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -31,11 +32,13 @@
   justify-items: center;
   width: 40%;
 }
+
 .footer-item {
   color: white;
   text-align: center;
   font-weight: bold;
 }
+
 .footer-note {
   color: white;
   margin-top: 10px;

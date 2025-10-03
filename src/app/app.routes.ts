@@ -24,4 +24,3 @@ export const routes: Routes = [
   { path: ROUTES.CONTACT, component: ContactPage },
   { path: '**', redirectTo: ROUTES.HOME },
 ];
-
