@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExecutiveComitteePage } from './executive-comittee-page';
+import { ExecutiveCommitteePage } from './executive-committee-page';
 
-describe('ExecutiveComitteePage', () => {
-  let component: ExecutiveComitteePage;
-  let fixture: ComponentFixture<ExecutiveComitteePage>;
+describe('ExecutiveCommitteePage', () => {
+  let component: ExecutiveCommitteePage;
+  let fixture: ComponentFixture<ExecutiveCommitteePage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExecutiveComitteePage]
+      imports: [ExecutiveCommitteePage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExecutiveComitteePage);
+    fixture = TestBed.createComponent(ExecutiveCommitteePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
