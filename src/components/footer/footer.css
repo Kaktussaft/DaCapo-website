@@ -8,6 +8,21 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
+.instagram-container {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url('/instagram.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.instagram-container:hover {
+  background-image: url('/instagram-coloured.svg');
+}
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,17 +31,12 @@
   justify-items: center;
   width: 40%;
 }
-.footer-item{
+.footer-item {
   color: white;
   text-align: center;
   font-weight: bold;
 }
-.footer-note{
+.footer-note {
   color: white;
   margin-top: 10px;
-}
-.instagram-link{
-  height: 40px;
-  width: auto;
-  cursor: pointer;
 }
