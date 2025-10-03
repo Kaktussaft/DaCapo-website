@@ -1,8 +1,8 @@
 export const ROUTES = {
   HOME: '',
   APPOINTMENTS: 'Termine',
-  SPONSORS: 'SPONSOREN',
-  CONTACT: 'KONTAKT',
+  SPONSORS: 'Sponsoren',
+  CONTACT: 'Kontakt',
 
   DA_CAPO_AL_FINE: 'Da Capo al Fine',
   CHOIR_DIRECTOR: 'Chorleiterin',
