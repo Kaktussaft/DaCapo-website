@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ROUTES } from '../../app/constants/routes.constants';
 
 @Component({
   selector: 'app-navigation',
@@ -18,39 +19,39 @@ export class NavigationComponent {
   navigationItems = [
     {
       label: 'ÜBER UNS',
-      route: '/',
+      // route: `/${ROUTES.HOME}`,
       key: 'about',
       dropdown: [
-        { label: 'Da Capo al Fine', route: '/Da Capo al Fine' },
-        { label: 'Chorleiterin', route: '/Chorleiterin' },
-        { label: 'Vorstand', route: '/Vorstand' },
-        { label: 'Geschichte', route: '/Geschichte' },
+        { label: 'Da Capo al Fine', route: `/${ROUTES.DA_CAPO_AL_FINE}` },
+        { label: 'Chorleiterin', route: `/${ROUTES.CHOIR_DIRECTOR}` },
+        { label: 'Vorstand', route: `/${ROUTES.EXECUTIVE_COMMITTEE}` },
+        { label: 'Geschichte', route: `/${ROUTES.HISTORY}` },
       ],
     },
     {
       label: 'GALERIE',
-      route: '/gallery',
+      // route: '/gallery',
       key: 'gallery',
       dropdown: [
-        { label: 'Fotos', route: '/Fotos' },
-        { label: 'Berichte', route: '/Berichte' },
+        { label: 'Fotos', route: `/${ROUTES.PICTURES}` },
+        { label: 'Berichte', route: `/${ROUTES.REPORTS}` },
       ],
     },
     {
       label: 'TERMINE',
-      route: '/Termine',
+      route: `/${ROUTES.APPOINTMENTS}`,
       key: 'appointments',
       dropdown: [],
     },
     {
       label: 'SPONSOREN',
-      route: '/SPONSOREN',
+      route: `/${ROUTES.SPONSORS}`,
       key: 'sponsors',
       dropdown: [],
     },
     {
       label: 'KONTAKT',
-      route: '/KONTAKT',
+      route: `/${ROUTES.CONTACT}`,
       key: 'contact',
       dropdown: [],
     },

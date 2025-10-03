@@ -9,18 +9,19 @@ import { PicturePage } from '../pages/gallery/picture-page/picture-page';
 import { AppointmentsPage } from '../pages/appointments-page/appointments-page';
 import { SponsorPage } from '../pages/sponsor-page/sponsor-page';
 import { ContactPage } from '../pages/contact-page/contact-page';
+import { ROUTES } from './constants/routes.constants';
 
 export const routes: Routes = [
-  { path: '', component: LandingPage },
-  { path: 'Da Capo al Fine', component: DaCapoAlFinePage },
-  { path: 'Chorleiterin', component: ChoirDirectorPage },
-  { path: 'Vorstand', component: ExecutiveCommitteePage },
-  { path: 'Geschichte', component: HistoryPage },
-  { path: 'Berichte', component: ReportPage },
-  { path: 'Fotos', component: PicturePage },
-  { path: 'Termine', component: AppointmentsPage },
-  { path: 'SPONSOREN', component: SponsorPage },
-  { path: 'KONTAKT', component: ContactPage },
-  { path: '**', redirectTo: '' },
+  { path: ROUTES.HOME, component: LandingPage },
+  { path: ROUTES.DA_CAPO_AL_FINE, component: DaCapoAlFinePage },
+  { path: ROUTES.CHOIR_DIRECTOR, component: ChoirDirectorPage },
+  { path: ROUTES.EXECUTIVE_COMMITTEE, component: ExecutiveCommitteePage },
+  { path: ROUTES.HISTORY, component: HistoryPage },
+  { path: ROUTES.REPORTS, component: ReportPage },
+  { path: ROUTES.PICTURES, component: PicturePage },
+  { path: ROUTES.APPOINTMENTS, component: AppointmentsPage },
+  { path: ROUTES.SPONSORS, component: SponsorPage },
+  { path: ROUTES.CONTACT, component: ContactPage },
+  { path: '**', redirectTo: ROUTES.HOME },
 ];
 
