@@ -1,0 +1,33 @@
+<div class="navigation-container">
+  @if (showLogo) {
+    <div class="logo-container">
+      <img [src]="logoSrc" alt="logo"  class="logo" />
+    </div>
+    <div class="spacer"></div>
+  }
+    <nav class="navigation-container-grid">
+        @for (item of navigationItems; track item.key) {
+            <div class="nav-item-container">
+                <div class="blue-indicator" [class.active]="activeDropdown === item.key"></div>
+                <a class="grid-item"
+                   [routerLink]="item.route"
+                   routerLinkActive="active"
+                   (click)="toggleDropdown(item.key)"
+                   [class.dropdown-active]="activeDropdown === item.key">
+                    {{item.label}}
+                </a>
+                @if (activeDropdown === item.key && item.dropdown.length > 0) {
+                    <div class="dropdown-menu">
+                        @for (dropdownItem of item.dropdown; track dropdownItem.route) {
+                            <a class="dropdown-item"
+                               [routerLink]="dropdownItem.route"
+                               (click)="closeDropdown()">
+                                {{dropdownItem.label}}
+                            </a>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </nav>
+</div>
