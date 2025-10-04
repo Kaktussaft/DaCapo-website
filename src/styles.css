@@ -4,7 +4,7 @@ body{
 }
 .content-container {
   margin: 20px auto;
-  width: 90%;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,41 @@ body{
   font-weight: bold;
 }
 
-.main-background-colour{
+.main-background-color{
   background-color:#283A8D;
+}
+
+.grid-50-50 {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  gap: 1rem;
+}
+
+.spacer-invisible-80px{
+  height: 80px;
+}
+.spacer-invisible-40px{
+  height: 40px;
+}
+ 
+.h1-blue-white{
+  background-color:#283A8D;
+  color:white;
+  font-weight: bold;
+  border-radius:5px;
+  margin: 2px;
+  padding:5px;
+  display: inline-block;
+}
+
+p {
+  font-size: 24px;
+}
+
+h1{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+h2{
+  margin: 0px;
 }
