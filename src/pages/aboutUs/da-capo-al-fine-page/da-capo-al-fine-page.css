@@ -1,0 +1,22 @@
+.grid-50-50-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.width {
+  width: 70%;
+}
+
+.member-list p {
+   margin: 4px 4px 2px 30px;
+  line-height: 1.2;
+  padding: 0;
+}
+
+.grid-25-25-25-25 {
+  display: grid;
+  grid-template-rows: 50px 90px 50px auto;
+  gap: 1rem;
+}
