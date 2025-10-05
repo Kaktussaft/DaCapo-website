@@ -26,8 +26,9 @@ jobs:
 
 
     - name: Deploy to GitHub Pages
-      run: |
-        npx angular-cli-ghpages --dir=dist/DaCapo-website
-      env:
-        CI: true
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      uses: peaceiris/actions-gh-pages@v4
+      if: github.ref == 'refs/heads/master'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist/Da-Capo-Website/browser
+        force_orphan: true
