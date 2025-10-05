@@ -9,7 +9,7 @@
   }
   <nav class="navigation-container-grid">
     @for (item of navigationItems; track item.key) {
-    <div class="nav-item-container"
+    <div class="nav-item-container font-style"
          (mouseenter)="toggleDropdown(item.key)"
          (mouseleave)="toggleDropdown(item.key)">
       <div class="blue-indicator" [class.active]="activeDropdown === item.key"></div>

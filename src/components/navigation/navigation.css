@@ -1,12 +1,12 @@
-.navigation-container{
-display: flex;
-flex-direction: row;
-margin-left: 60px;
-margin-right: 60px;
-position: sticky;
-top: 0;
-background-color: white;
-z-index: 1000;
+.navigation-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
 }
 
 .navigation-container:not(:has(.logo-container)) {
@@ -17,16 +17,16 @@ z-index: 1000;
   justify-content: space-between;
 }
 
-.navigation-container-grid{
-    display: grid;
-    grid-template-columns: repeat(5, 140px);
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.navigation-container-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.logo{
+.logo {
   height: 50px;
   width: auto;
 }
@@ -41,8 +41,8 @@ z-index: 1000;
 
 .blue-indicator {
   align-self: self-start;
-  left:20px;
-  top:-2px;
+  left: 20px;
+  top: -2px;
   height: 8px;
   width: 40%;
   background-color: transparent;
@@ -52,7 +52,7 @@ z-index: 1000;
 }
 
 .blue-indicator.active {
-  background-color: #283A8D;
+  background-color: #283a8d;
 }
 
 .grid-item {
@@ -74,7 +74,7 @@ z-index: 1000;
   top: 100%;
   left: 80%;
   transform: translateX(-50%);
-  background-color: #E7E9F2;
+  background-color: #e7e9f2;
   border: 1px solid #ddd;
   border-radius: 2px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -103,4 +103,10 @@ z-index: 1000;
 
 .spacer {
   flex: 1;
+}
+
+.font-style {
+  font-size: 20px;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0px;
 }
