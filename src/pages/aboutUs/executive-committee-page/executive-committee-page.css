@@ -1,0 +1,40 @@
+.margin-left{
+  margin-left:30px;
+}
+
+.executive-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.role-item .role {
+  font-weight: bold;
+  flex: 0 0 auto;
+  min-width: 240px;
+}
+
+.role-item .name {
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .role-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .role-item .name {
+    text-align: left;
+    margin-left: 1rem;
+  }
+}

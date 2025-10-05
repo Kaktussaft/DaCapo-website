@@ -23,6 +23,14 @@ body {
   gap: 1rem;
 }
 
+.grid-50-50-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+
 .spacer-invisible-80px {
   height: 80px;
 }
@@ -38,6 +46,10 @@ body {
   margin: 2px;
   padding: 5px;
   display: inline-block;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 p {
