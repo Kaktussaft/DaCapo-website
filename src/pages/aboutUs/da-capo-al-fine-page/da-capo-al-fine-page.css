@@ -6,7 +6,7 @@
 }
 
 .width {
-  width: 70%;
+  width: 80%;
 }
 
 .member-list p {
@@ -17,6 +17,13 @@
 
 .grid-25-25-25-25 {
   display: grid;
-  grid-template-rows: 50px 90px 50px auto;
+  grid-template-rows: 50px 80px 50px auto;
   gap: 1rem;
+}
+ul{
+  margin: 5px;
+}
+
+.margin-top{
+  margin-top:10px;
 }
