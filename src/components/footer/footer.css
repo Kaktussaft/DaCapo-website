@@ -13,15 +13,17 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  background-image: url('/instagram.svg');
+  background-image: url('/assets/images/instagram.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.3s ease;
+  display: block;
+  min-height: 40px;
 }
 
 .instagram-container:hover {
-  background-image: url('/instagram-coloured.svg');
+  background-image: url('/assets/images/instagram-coloured.svg');
 }
 
 .footer-grid {

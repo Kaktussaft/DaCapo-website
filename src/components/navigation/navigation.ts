@@ -11,7 +11,7 @@ import { ROUTES } from '../../app/constants/routes.constants';
 })
 export class NavigationComponent {
   @Input() showLogo: boolean = true;
-  @Input() logoSrc: string = '/Logo.jpg';
+  @Input() logoSrc: string = '/assets/images/Logo.jpg';
   @Input() logoAlt: string = 'Logo';
 
   activeDropdown: string | null = null;
