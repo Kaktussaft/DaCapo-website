@@ -30,11 +30,10 @@ export class NavigationComponent {
     },
     {
       label: 'GALERIE',
-      // route: '/gallery',
       key: 'gallery',
       dropdown: [
-        { label: 'Fotos', route: `/${ROUTES.PICTURES}` },
         { label: 'Berichte', route: `/${ROUTES.REPORTS}` },
+        { label: 'Fotos', route: `/${ROUTES.PICTURES}` },
       ],
     },
     {
