@@ -12,7 +12,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   styleUrl: './appointments-page.css',
 })
 export class AppointmentsPage {
-  pdfSrc = '/assets/documents/probenplan da capo 202526.pdf';
+  pdfSrc = 'assets/documents/probenplan da capo 202526.pdf';
   showPdfViewer = false;
 
   togglePdfViewer() {
