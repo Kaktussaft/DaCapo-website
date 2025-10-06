@@ -17,7 +17,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image 0.3s ease;
+  transition: all 0.3s ease;
   display: block;
   min-height: 40px;
 }
