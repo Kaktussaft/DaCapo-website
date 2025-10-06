@@ -12,7 +12,6 @@ body {
   justify-content: flex-start;
 }
 
-
 .main-background-color {
   background-color: #283a8d;
 }
@@ -89,6 +88,17 @@ h3 {
   border-radius: 5px;
   padding: 5px;
   display: inline-block;
+}
+
+
+.image-container{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border-color: #283a8d;
+  border-width: 3px;
+  border-style: solid;
 }
 
 
