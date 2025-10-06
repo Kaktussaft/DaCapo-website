@@ -15,6 +15,8 @@ export class NavigationComponent {
   @Input() logoAlt: string = 'Logo';
 
   activeDropdown: string | null = null;
+  mobileMenuOpen: boolean = false;
+  activeMobileDropdown: string | null = null;
 
   navigationItems = [
     {
@@ -62,5 +64,23 @@ export class NavigationComponent {
 
   closeDropdown(): void {
     this.activeDropdown = null;
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+    if (!this.mobileMenuOpen) {
+      this.activeMobileDropdown = null;
+    }
+    document.body.style.overflow = this.mobileMenuOpen ? 'hidden' : 'auto';
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
+    this.activeMobileDropdown = null;
+    document.body.style.overflow = 'auto';
+  }
+
+  toggleMobileDropdown(key: string): void {
+    this.activeMobileDropdown = this.activeMobileDropdown === key ? null : key;
   }
 }

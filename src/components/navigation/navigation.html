@@ -1,4 +1,5 @@
 <div class="navigation-container">
+  <div class="spacer-60"></div>
   @if (showLogo) {
   <div class="logo-container">
     <img [src]="logoSrc" alt="logo" class="logo" />
@@ -7,11 +8,14 @@
   } @else {
   <div class="spacer"></div>
   }
+
   <nav class="navigation-container-grid">
     @for (item of navigationItems; track item.key) {
-    <div class="nav-item-container font-style"
-         (mouseenter)="toggleDropdown(item.key)"
-         (mouseleave)="toggleDropdown(item.key)">
+    <div
+      class="nav-item-container font-style"
+      (mouseenter)="toggleDropdown(item.key)"
+      (mouseleave)="toggleDropdown(item.key)"
+    >
       <div class="blue-indicator" [class.active]="activeDropdown === item.key"></div>
       <a
         class="grid-item"
@@ -33,4 +37,49 @@
     </div>
     }
   </nav>
+
+  <button
+    type="button"
+    class="hamburger-menu"
+    [class.active]="mobileMenuOpen"
+    (click)="toggleMobileMenu()"
+    [attr.aria-label]="mobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'"
+    [attr.aria-expanded]="mobileMenuOpen"
+  >
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <span class="sr-only">{{ mobileMenuOpen ? 'Menü schließen' : 'Menü öffnen' }}</span>
+  </button>
+
+  <div class="spacer-60"></div>
+</div>
+
+<div class="mobile-nav-overlay" [class.active]="mobileMenuOpen">
+  <div class="mobile-nav-menu">
+    @for (item of navigationItems; track item.key) { @if (item.dropdown.length === 0) {
+    <a class="mobile-nav-item" [routerLink]="item.route" (click)="closeMobileMenu()">
+      {{ item.label }}
+    </a>
+    } @else {
+    <div>
+      <a class="mobile-nav-item" [routerLink]="item.route" (click)="toggleMobileDropdown(item.key)">
+        {{ item.label }}
+      </a>
+      @if (activeMobileDropdown === item.key) {
+      <div class="mobile-dropdown-items">
+        @for (dropdownItem of item.dropdown; track dropdownItem.route) {
+        <a
+          class="mobile-dropdown-item"
+          [routerLink]="dropdownItem.route"
+          (click)="closeMobileMenu()"
+        >
+          {{ dropdownItem.label }}
+        </a>
+        }
+      </div>
+      }
+    </div>
+    } }
+  </div>
 </div>
