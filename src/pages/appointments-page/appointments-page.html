@@ -2,6 +2,24 @@
 <div class="content-container">
   <app-custom-font-header title="Termine"></app-custom-font-header>
   <h1>TERMINPLAN 2025/2026</h1>
-  <div>pdf download</div>
+
+  <div class="pdf-controls">
+    <button class="pdf-button download-button" (click)="downloadPdf()">
+      📄 Herunterladen
+    </button>
+  </div>
+
+    <div class="pdf-container">
+      <pdf-viewer
+        [src]="pdfSrc"
+        [render-text]="true"
+        [original-size]="false"
+        [fit-to-page]="true"
+        [show-all]="true"
+        [autoresize]="true"
+        class="pdf-viewer">
+      </pdf-viewer>
+    </div>
+
 </div>
 <app-footer></app-footer>
