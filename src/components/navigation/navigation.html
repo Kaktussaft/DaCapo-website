@@ -57,6 +57,12 @@
 
 <div class="mobile-nav-overlay" [class.active]="mobileMenuOpen">
   <div class="mobile-nav-menu">
+    <img
+      src="assets/images/close.svg"
+      class="close-MobileMenu"
+      (click)="closeMobileMenu()"
+      alt="Menü schließen"
+    />
     @for (item of navigationItems; track item.key) { @if (item.dropdown.length === 0) {
     <a class="mobile-nav-item" [routerLink]="item.route" (click)="closeMobileMenu()">
       {{ item.label }}

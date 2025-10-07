@@ -9,8 +9,8 @@
 
 .image-column {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .image-column:hover {
@@ -55,6 +55,9 @@
   align-items: center;
 }
 
+/*************************************************
+****************Responsive Design*****************
+*************************************************/
 
 @media (max-width: 1024px) {
   .four-column-grid {

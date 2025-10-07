@@ -235,6 +235,17 @@
   transform: scale(1.05);
 }
 
+.close-MobileMenu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .navigation-container {
     margin-left: 20px;
