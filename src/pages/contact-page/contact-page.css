@@ -70,12 +70,11 @@ h3.h3-blue-white {
   background-color: #283a8d !important;
   color: white !important;
   font-weight: bold !important;
-  border-radius: 5px;
   padding: 8px 12px;
   display: inline-block;
   font-size: 18px !important;
-  font-family: 'Poppins', Arial, sans-serif !important;
-  line-height: 1.2;
+  font-family: 'Bettina Signature', Arial, sans-serif !important;
+  line-height: 2;
 }
 
 @media (max-width: 768px) {

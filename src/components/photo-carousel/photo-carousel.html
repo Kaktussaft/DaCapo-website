@@ -1,0 +1,15 @@
+<div class="carousel-container">
+
+  <div class="carousel-track">
+    @for (visibleItem of visibleItems; track visibleItem.item.imageUrl) {
+      <div [class]="'carousel-item carousel-item-' + visibleItem.position"
+           [class.carousel-item-center]="visibleItem.position === 'center'"
+           (click)="visibleItem.position !== 'center' && (visibleItem.position === 'left' ? previous() : next())">
+        <img [src]="visibleItem.item.imageUrl" [alt]="visibleItem.item.alt" />
+      </div>
+    }
+  </div>
+
+</div>
+
+

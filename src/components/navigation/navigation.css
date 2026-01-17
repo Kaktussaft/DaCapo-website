@@ -46,7 +46,6 @@
   width: 40%;
   background-color: transparent;
   position: absolute;
-  border-radius: 3px;
   transition: background-color 0.3s ease;
 }
 

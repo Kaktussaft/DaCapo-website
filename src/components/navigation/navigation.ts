@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ROUTES } from '../../app/constants/routes.constants';
 
 @Component({
@@ -18,10 +18,12 @@ export class NavigationComponent {
   mobileMenuOpen: boolean = false;
   activeMobileDropdown: string | null = null;
 
+  constructor(private router: Router) {}
+
   navigationItems = [
     {
       label: 'ÜBER UNS',
-      route: `/${ROUTES.HOME}`,
+      route: `/${ROUTES.DA_CAPO_AL_FINE}`,
       key: 'about',
       dropdown: [
         { label: 'Da Capo al Fine', route: `/${ROUTES.DA_CAPO_AL_FINE}` },
@@ -32,6 +34,7 @@ export class NavigationComponent {
     },
     {
       label: 'GALERIE',
+      route: `/${ROUTES.REPORTS}`,
       key: 'gallery',
       dropdown: [
         { label: 'Berichte', route: `/${ROUTES.REPORTS}` },
@@ -58,8 +61,8 @@ export class NavigationComponent {
     },
   ];
 
-  toggleDropdown(key: string): void {
-    this.activeDropdown = this.activeDropdown === key ? null : key;
+  openDropdown(key: string): void {
+    this.activeDropdown = key;
   }
 
   closeDropdown(): void {
@@ -82,5 +85,18 @@ export class NavigationComponent {
 
   toggleMobileDropdown(key: string): void {
     this.activeMobileDropdown = this.activeMobileDropdown === key ? null : key;
+  }
+
+  handleMobileNavClick(item: any, event: Event): void {
+    if (item.dropdown.length > 0) {
+      event.preventDefault();
+      this.toggleMobileDropdown(item.key);
+    } else {
+      this.closeMobileMenu();
+    }
+  }
+
+  handleMobileDropdownItemClick(route: string): void {
+    this.closeMobileMenu();
   }
 }

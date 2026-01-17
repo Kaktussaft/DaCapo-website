@@ -2,19 +2,21 @@
   <div class="grid-50-50 main-background-color">
     <div class="landingPage-header">
       <div class="group">
-        <h2 class="small">JUGENDCHOR</h2>
+        <h2 class="large">JUGENDCHOR</h2>
         <h1>DA CAPO AL FINE</h1>
-        <p class="small">BREGENZERWALD</p>
+        <p class="large">BREGENZERWALD</p>
       </div>
     </div>
-    <div class="landingPage-header">white Logo</div>
+    <div class="logo-container">
+      <img class="DaCapoLogo" src="assets/images/da_capo_logo_white.svg" alt="White Logo" />
+    </div>
   </div>
   <div><img class="landing-page-image" src="assets/images/2025_dacapo.jpg" alt="DaCapo" /></div>
 </div>
 <app-navigation [showLogo]="false"></app-navigation>
 <div class="content-container">
-  <div>placeholder photo carousel</div>
-  <app-custom-font-header title="Unsere nächsten Konzerte"></app-custom-font-header>
+  <app-photo-carousel [items]="carouselItems"></app-photo-carousel>
+  <h1>Unsere nächsten Konzerte</h1>
 
   <!-- Konzert Eintrag 1 -->
   <h2>Konzert 1</h2>
@@ -27,10 +29,10 @@
   <div><p>Datum & Uhrzeit</p></div>
   <div><p>Ort</p></div>
   <div class="spacer"></div>
-  <app-custom-font-header title="News"></app-custom-font-header>
+  <h1>Aktuelles</h1>
 
   <!--News Eintrag -->
-  <h1>Offene Probe</h1>
+  <h2>Offene Probe</h2>
   <div>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
