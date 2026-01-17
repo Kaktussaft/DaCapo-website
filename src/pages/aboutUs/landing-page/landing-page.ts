@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { NavigationComponent } from "../../../components/navigation/navigation";
-import { Footer } from "../../../components/footer/footer";
 import { PhotoCarouselComponent, CarouselItem } from "../../../components/photo-carousel/photo-carousel";
 @Component({
   selector: 'app-landing-page',
-  imports: [NavigationComponent, Footer, PhotoCarouselComponent],
+  imports: [NavigationComponent, PhotoCarouselComponent],
   templateUrl: './landing-page.html',
   styleUrls: ['./landing-page.css'],
 })

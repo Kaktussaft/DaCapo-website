@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { NavigationComponent } from "../../components/navigation/navigation";
-import { Footer } from "../../components/footer/footer";
 
 @Component({
   selector: 'app-imprint',
-  imports: [NavigationComponent, Footer],
+  imports: [NavigationComponent],
   templateUrl: './imprint.html',
   styleUrl: './imprint.css'
 })

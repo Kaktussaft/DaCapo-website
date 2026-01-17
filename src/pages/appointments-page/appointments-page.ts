@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from "../../components/navigation/navigation";
-import { Footer } from "../../components/footer/footer";
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @Component({
   selector: 'app-appointments-page',
-  imports: [CommonModule, NavigationComponent, Footer, PdfViewerModule],
+  imports: [CommonModule, NavigationComponent, PdfViewerModule],
   templateUrl: './appointments-page.html',
   styleUrl: './appointments-page.css',
 })
