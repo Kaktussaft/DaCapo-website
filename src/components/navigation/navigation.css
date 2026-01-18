@@ -205,6 +205,7 @@
   font-weight: bold;
   padding: 1rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .mobile-nav-item:hover {
