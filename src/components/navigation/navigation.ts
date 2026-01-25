@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router, RouterModule } from '@angular/router';
 import { ROUTES } from '../../app/constants/routes.constants';
 
 @Component({
   selector: 'app-navigation',
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './navigation.html',
   styleUrl: './navigation.css',
 })
