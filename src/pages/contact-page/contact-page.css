@@ -55,6 +55,28 @@
   align-items: center;
 }
 
+h3.h3-blue-white {
+  background-color: #283a8d !important;
+  color: white !important;
+  font-weight: bold !important;
+  padding: 4px 10px;
+  display: inline-block;
+  font-size: 24px !important;
+  line-height: 2;
+}
+
+.grid-30-70 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+
 /*************************************************
 ****************Responsive Design*****************
 *************************************************/
@@ -66,16 +88,6 @@
   }
 }
 
-h3.h3-blue-white {
-  background-color: #283a8d !important;
-  color: white !important;
-  font-weight: bold !important;
-  padding: 8px 12px;
-  display: inline-block;
-  font-size: 18px !important;
-  font-family: 'Bettina Signature', Arial, sans-serif !important;
-  line-height: 2;
-}
 
 @media (max-width: 768px) {
   .four-column-grid {
@@ -86,4 +98,60 @@ h3.h3-blue-white {
   .image-column {
     order: -1;
   }
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #283a8d;
+}
+
+.submit-button {
+  background-color: #283a8d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #1f2e7a;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
 }

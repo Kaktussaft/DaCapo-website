@@ -1,6 +1,6 @@
-  <app-navigation [showLogo]="true"></app-navigation>
-  <div class="content-container">
-    <h1>Meld di bi üs!</h1>
+<app-navigation [showLogo]="true"></app-navigation>
+<div class="content-container">
+  <h1>Meld di bi üs!</h1>
   <p>
     Du hast Lust bekommen, gemeinsam mit uns zu singen? Dann melde dich gerne bei uns! <br />
     Hast du Fragen oder möchtest uns unterstützen? Wir freuen uns über jede Nachricht. Schreib uns
@@ -9,18 +9,30 @@
   </p>
 
   <div class="spacer-invisible-40px"></div>
-  <h1>KONTAKT</h1>
-  <p>Kontaktformular</p>
+  <h2>KONTAKT</h2>
+  <form (ngSubmit)="sendEmail()" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required placeholder="Dein Name" />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Nachricht:</label>
+      <textarea id="message" [(ngModel)]="message" name="message" required placeholder="Deine Nachricht" rows="5"></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Nachricht senden</button>
+  </form>
 
   <div class="spacer-invisible-40px"></div>
-  <h1>MITSINGEN</h1>
+  <h2>MITSINGEN</h2>
   <p>
     Du hast Freude am Singen und möchtest Teil unserer tollen Gemeinschaft werden? Melde dich gerne
     bei uns!
   </p>
   <div class="spacer-invisible-40px"></div>
   <div class="grid-50-50-columns width-80">
-    <div class="grid-25-75">
+    <div class="grid-30-70">
       <div class="image-column">
         <img class="image-large" src="assets/images/message-blue.svg" alt="Message-Icon" />
       </div>
@@ -33,7 +45,7 @@
       </div>
     </div>
 
-    <div class="grid-25-75">
+    <div class="grid-30-70">
       <div class="image-column">
         <img class="image-large" src="assets/images/message-blue.svg" alt="Message-Icon" />
       </div>
@@ -48,25 +60,27 @@
   </div>
 
   <div class="spacer-invisible-40px"></div>
-  <h1>UNTERSTÜTZEN</h1>
+  <h2>UNTERSTÜTZEN</h2>
   <p>
-    Ein Chor macht nicht nur sehr viel Spaß, unsere Auftritte, Konzerte & Ausflüge kosten auch sehr
-    viel Geld. <br />
+    Ein Chor macht unglaublich viel Spaß. Damit all die Auftritte, Konzerte & Ausflüge möglich sind,
+    braucht es neben Begeisterung und Engagement auch finanzielle Unterstützung. <br />
     Über jegliche Unterstützung freuen wir uns sehr!
   </p>
   <div class="spacer-invisible-40px"></div>
 
   <div class="grid-50-50-columns width-80">
-    <div class="grid-25-75">
-      <div class="image-column">
-        <img class="image-large" src="assets/images/message-blue.svg" alt="Message-Icon" />
-      </div>
-      <div class="text-column">
+    <div >
+         <div class="text-column">
         <p>
-          <strong>Bankdaten?</strong><br />
-          .<br />
+          <strong
+            ><ul>
+              <li>Ingrid Held Jugendchor Da Capo</li>
+              <li>IBAN: AT69 3742 3000 0204 4519</li>
+              <li>BIC: RVVGAT2B423</li>
+            </ul></strong
+          ><br />
         </p>
-        <h3 class="h3-blue-white">.</h3>
+
       </div>
     </div>
 
@@ -85,18 +99,24 @@
   </div>
 
   <div class="spacer-invisible-40px"></div>
-  <h1>MELD DIE BI ÜS!</h1>
+  <h2>MELD DIE BI ÜS!</h2>
   <p>Schau gerne mal bei uns vorbei, schreib uns eine nachricht oder verfolge uns auf Instagram!</p>
   <div class="spacer-invisible-40px"></div>
   <div class="grid-50-50-columns">
     <div>
       <div class="picture-text-grid">
         <div class="image-column">
-          <img class="image-small" src="assets/images/location-pin.svg" alt="Location Pin" />
+          <a href="https://www.google.com/maps/place/MS+Lingenau/@47.4506783,9.9185428,254m/data=!3m1!1e3!4m6!3m5!1s0x479b6f0a26e74987:0xd98657558c153ba8!8m2!3d47.4509696!4d9.9195394!16s%2Fg%2F1tdhc_6q?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank" rel="noopener noreferrer">
+          <img
+            class="image-small"
+            src="assets/images/location-pin.svg"
+            alt="Location Pin"
+             />
+             </a>
         </div>
         <div class="text-column">
           <p>
-            <strong>jugendchor Da Capo al fine Bregenzerwald</strong><br />
+            <strong>Jugendchor Da Capo al Fine Bregenzerwald</strong><br />
             Hof 269<br />
             6951 Lingenau
           </p>
