@@ -3,7 +3,6 @@ import { LandingPage } from '../pages/aboutUs/landing-page/landing-page';
 import { DaCapoAlFinePage } from '../pages/aboutUs/da-capo-al-fine-page/da-capo-al-fine-page';
 import { ChoirDirectorPage } from '../pages/aboutUs/choir-director-page/choir-director-page';
 import { ExecutiveCommitteePage } from '../pages/aboutUs/executive-committee-page/executive-committee-page';
-import { HistoryPage } from '../pages/aboutUs/history-page/history-page';
 import { ReportPage } from '../pages/gallery/report-page/report-page';
 import { PicturePage } from '../pages/gallery/picture-page/picture-page';
 import { AppointmentsPage } from '../pages/appointments-page/appointments-page';
@@ -16,7 +15,6 @@ export const routes: Routes = [
   { path: ROUTES.DA_CAPO_AL_FINE, component: DaCapoAlFinePage },
   { path: ROUTES.CHOIR_DIRECTOR, component: ChoirDirectorPage },
   { path: ROUTES.EXECUTIVE_COMMITTEE, component: ExecutiveCommitteePage },
-  { path: ROUTES.HISTORY, component: HistoryPage },
   { path: ROUTES.REPORTS, component: ReportPage },
   { path: ROUTES.PICTURES, component: PicturePage },
   { path: ROUTES.APPOINTMENTS, component: AppointmentsPage },

@@ -7,7 +7,6 @@ export const ROUTES = {
   DA_CAPO_AL_FINE: 'Da Capo al Fine',
   CHOIR_DIRECTOR: 'Chorleiterin',
   EXECUTIVE_COMMITTEE: 'Vorstand',
-  HISTORY: 'Geschichte',
 
   REPORTS: 'Berichte',
   PICTURES: 'Fotos',

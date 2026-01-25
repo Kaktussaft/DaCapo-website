@@ -5,6 +5,7 @@ import { ROUTES } from '../../app/constants/routes.constants';
 
 @Component({
   selector: 'app-navigation',
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './navigation.html',
   styleUrl: './navigation.css',
@@ -29,7 +30,6 @@ export class NavigationComponent {
         { label: 'Da Capo al Fine', route: `/${ROUTES.DA_CAPO_AL_FINE}` },
         { label: 'Chorleiterin', route: `/${ROUTES.CHOIR_DIRECTOR}` },
         { label: 'Vorstand', route: `/${ROUTES.EXECUTIVE_COMMITTEE}` },
-        { label: 'Geschichte', route: `/${ROUTES.HISTORY}` },
       ],
     },
     {

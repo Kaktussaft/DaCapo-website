@@ -11,8 +11,8 @@
 }
 
 .instagram-container {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   background-image: url('../../assets/images/instagram.svg');
   background-size: contain;
@@ -20,7 +20,7 @@
   background-position: center;
   transition: all 0.3s ease;
   display: block;
-  min-height: 40px;
+  min-height: 30px;
 }
 
 .instagram-container:hover {
