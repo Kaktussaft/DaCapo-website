@@ -19,6 +19,7 @@
   <h1>Unsere nächsten Konzerte</h1>
 
   <!-- Konzert Eintrag 1 -->
+
   <h2>Konzert 1</h2>
   <div><p>Datum & Uhrzeit</p></div>
   <div><p>Ort</p></div>
@@ -31,37 +32,18 @@
 
     <div class="spacer"></div>
 
-  <h2>WAS WIR MACHEN</h2>
+  <h2>{{ content?.Header_WasWirMachen || 'WAS WIR MACHEN' }}</h2>
   <div>
-    <p>
-      Wir sind <b>Da Capo al Fine</b>, ein Jugendchor mit Sängerinnen und Sängern zwischen 16 und 27 Jahren
-      aus dem ganzen Bregenzerwald. Uns verbindet die Freude am gemeinsamen Singen und an besonderen
-      musikalischen Momenten. Gemeinsam erarbeiten wir abwechslungsreiche Programme, gestalten
-      Konzerte, treten bei verschiedensten Veranstaltungen auf und nehmen regelmäßig an
-      Chorfestivals sowie Wettbewerben im In- und Ausland teil. Dabei sind wir nicht nur musikalisch
-      ambitioniert, sondern auch ein lebendiger, bunter Haufen, in dem man sich sofort willkommen
-      fühlt. Unsere Proben finden projektweise an Samstagvormittagen statt – konzentriert, mit viel
-      Energie und immer in einer freundschaftlichen Atmosphäre. Ob Konzert, Festival oder spezieller
-      Anlass: Wir sind mit Begeisterung dabei und bringen unsere Musik überall dorthin, wo sie
-      Menschen berührt.
-    </p>
+    <p [innerHTML]="content?.Content_WasWirMachen || 'Loading...'"></p>
   </div>
   <div class="spacer-invisible-40px"></div>
 
     <div class="spacer"></div>
-  <h1>Aktuelles</h1>
+  <h1>{{ content?.Header_Aktuelles || 'Aktuelles' }}</h1>
   <!--News Eintrag -->
-  <h2>Offene Probe</h2>
+  <h2>{{ loading ? 'Lädt...' : (error ? 'Fehler beim Laden' : '') }}</h2>
   <div>
-    <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-      justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-      ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-      et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-      sanctus est Lorem ipsum dolor sit amet.
-    </p>
+    <p [innerHTML]="content?.Content_Aktuelles || 'Loading...'"></p>
   </div>
   <div class="spacer-invisible-40px"></div>
 </div>
