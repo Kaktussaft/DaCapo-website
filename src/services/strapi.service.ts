@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Apollo, gql } from 'apollo-angular';
+import { Apollo } from 'apollo-angular';
+import { DocumentNode } from 'graphql';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,25 +10,15 @@ export interface LandingPageContent {
   Content_WasWirMachen: string;
   Header_Aktuelles: string;
   Content_Aktuelles: string;
+  Concerts?: Concert[];
 }
 
-
-interface LandingPageContentResponse {
-  landingPageContent: LandingPageContent;
+export interface Concert {
+  documidentId: string;
+  ConcertTitle: string;
+  ConcertDate: string;
+  Location: string;
 }
-
-const GET_LANDING_PAGE_CONTENT = gql`
-  query GetLandingPageContent {
-    landingPageContent {
-      documentId
-      Content_Aktuelles
-      Content_WasWirMachen
-      Header_Aktuelles
-      Header_WasWirMachen
-    }
-
-  }
-`;
 
 @Injectable({
   providedIn: 'root',
@@ -35,17 +26,23 @@ const GET_LANDING_PAGE_CONTENT = gql`
 export class StrapiService {
   constructor(private readonly apollo: Apollo) {}
 
-  getLandingPageContent(): Observable<LandingPageContent> {
+  /**
+   * Generic query method that accepts a GraphQL query and returns typed results
+   * @param query The GraphQL query (DocumentNode)
+   * @param dataKey The key to extract from the response (e.g., 'landingPageContent')
+   * @returns Observable of the typed result
+   */
+  query<T, R = { [key: string]: T }>(query: DocumentNode, dataKey: string): Observable<T> {
     return this.apollo
-      .query<LandingPageContentResponse>({
-        query: GET_LANDING_PAGE_CONTENT,
+      .query<R>({
+        query,
       })
       .pipe(
         map((result) => {
           if (!result.data) {
             throw new Error('No data returned from GraphQL query');
           }
-          return result.data.landingPageContent;
+          return (result.data as any)[dataKey];
         }),
       );
   }

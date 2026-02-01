@@ -18,17 +18,18 @@
   <app-photo-carousel [items]="carouselItems"></app-photo-carousel>
   <h1>Unsere nächsten Konzerte</h1>
 
-  <!-- Konzert Eintrag 1 -->
-
-  <h2>Konzert 1</h2>
-  <div><p>Datum & Uhrzeit</p></div>
-  <div><p>Ort</p></div>
-  <div class="spacer-invisible-40px"></div>
-
-  <!-- Konzert Eintrag 2 -->
-  <h2>Konzert 2</h2>
-  <div><p>Datum & Uhrzeit</p></div>
-  <div><p>Ort</p></div>
+  @if (loading) {
+    <p>Konzerte werden geladen...</p>
+  } @else if (content?.Concerts?.length === 0) {
+    <p>Derzeit sind keine Konzerte geplant.</p>
+  } @else {
+    @for (concert of content?.Concerts; track concert.documidentId) {
+      <h2>{{ concert.ConcertTitle }}</h2>
+      <div><p>{{ concert.ConcertDate }}</p></div>
+      <div><p>{{ concert.Location }}</p></div>
+      <div class="spacer-invisible-40px"></div>
+    }
+  }
 
     <div class="spacer"></div>
 
