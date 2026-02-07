@@ -1,0 +1,53 @@
+.sponsor-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.sponsor-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.sponsor-logo-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.noten-sponsoren-list {
+  margin-top: 20px;
+}
+
+.loading-message,
+.error-message {
+  padding: 20px;
+  text-align: center;
+}
+
+.error-message {
+  color: #d32f2f;
+}
+
+@media (max-width: 1200px) {
+  .sponsor-logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
