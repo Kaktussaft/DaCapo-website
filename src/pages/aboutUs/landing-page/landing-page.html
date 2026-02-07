@@ -23,7 +23,7 @@
   } @else if (content?.Concerts?.length === 0) {
     <p>Derzeit sind keine Konzerte geplant.</p>
   } @else {
-    @for (concert of content?.Concerts; track concert.documidentId) {
+    @for (concert of content?.Concerts; track concert.documidentId ) {
       <h2>{{ concert.ConcertTitle }}</h2>
       <div><p>{{ concert.ConcertDate }}</p></div>
       <div><p>{{ concert.Location }}</p></div>

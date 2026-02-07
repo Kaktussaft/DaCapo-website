@@ -6,7 +6,9 @@ import {
   PhotoCarouselComponent,
   CarouselItem,
 } from '../../../components/photo-carousel/photo-carousel';
-import { StrapiService, LandingPageContent, Concert } from '../../../services/strapi.service';
+import { StrapiService} from '../../../services/strapi.service';
+import { LandingPageContent, Concert, CarouselImage, CarouselEntry } from '../../../services/strapi.service.interface';
+import { STRAPI_URL } from '../../../app/constants/api.key';
 
 const GET_LANDING_PAGE_CONTENT = gql`
   query GetLandingPageContent {
@@ -23,6 +25,12 @@ const GET_LANDING_PAGE_CONTENT = gql`
       ConcertDate
       Location
     }
+    carouselImage {
+      CarouselEntries {
+        url
+        alternativeText
+      }
+    }
   }
 `;
 
@@ -33,11 +41,7 @@ const GET_LANDING_PAGE_CONTENT = gql`
   styleUrls: ['./landing-page.css'],
 })
 export class LandingPage implements OnInit {
-  carouselItems: CarouselItem[] = [
-    { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo 2025' },
-    { imageUrl: 'assets/images/2025_probenwochenende.jpg', alt: 'Da Capo Concert' },
-    { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo Performance' },
-  ];
+  carouselItems: CarouselItem[] = [];
 
   content: LandingPageContent | null = null;
   loading: boolean = true;
@@ -50,7 +54,7 @@ export class LandingPage implements OnInit {
 
   ngOnInit(): void {
     this.apollo
-      .query<{ landingPageContent: LandingPageContent; concerts: Concert[] }>({
+      .query<{ landingPageContent: LandingPageContent; concerts: Concert[]; carouselImage: CarouselImage }>({
         query: GET_LANDING_PAGE_CONTENT,
       })
       .subscribe({
@@ -60,6 +64,10 @@ export class LandingPage implements OnInit {
               ...result.data.landingPageContent,
               Concerts:  this.SortDateAscending(result.data.concerts),
             };
+            this.carouselItems = result.data.carouselImage.CarouselEntries.map(entry => ({
+              imageUrl: `${STRAPI_URL}${entry.url}`,
+              alt: entry.alternativeText
+            }));
           }
           this.loading = false;
         },

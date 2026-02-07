@@ -4,21 +4,6 @@ import { DocumentNode } from 'graphql';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-export interface LandingPageContent {
-  documentId: string;
-  Header_WasWirMachen: string;
-  Content_WasWirMachen: string;
-  Header_Aktuelles: string;
-  Content_Aktuelles: string;
-  Concerts?: Concert[];
-}
-
-export interface Concert {
-  documidentId: string;
-  ConcertTitle: string;
-  ConcertDate: string;
-  Location: string;
-}
 
 @Injectable({
   providedIn: 'root',
