@@ -11,8 +11,8 @@
 }
 
 .instagram-container {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   background-image: url('../../assets/images/instagram.svg');
   background-size: contain;
@@ -20,14 +20,16 @@
   background-position: center;
   transition: all 0.3s ease;
   display: block;
-  min-height: 30px;
+  min-height: 24px;
 }
 
 .instagram-container:hover {
-  background-image: url('../../assets/images/instagram-coloured.svg');
+width: 32px;
+height: 32px;
 }
 
 .footer-grid {
+  height: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
