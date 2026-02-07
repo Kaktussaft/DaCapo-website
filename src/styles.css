@@ -44,8 +44,6 @@ body {
   overflow: hidden;
 }
 
-
-
 .spacer-invisible-80px {
   height: 80px;
 }
@@ -113,6 +111,12 @@ h3 {
 
 .width-80 {
   width: 80%;
+}
+
+.text {
+  font-size: 18px;
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
 }
 
 /*************************************************

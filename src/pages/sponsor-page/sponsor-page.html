@@ -1,6 +1,40 @@
-  <app-navigation [showLogo]="true"></app-navigation>
-  <div class="content-container">
-    <h1 >Sponsoren</h1>
-    <h1>Sponsoren</h1>
-    <h1>Notensponsoren</h1>
-  </div>
+<app-navigation [showLogo]="true"></app-navigation>
+<div class="content-container">
+  <h1>Denkeschön vielmol!</h1>
+  <h2>UNSERE SPONSOREN</h2>
+  <p>an all unsere Sponsoren - ohne euch wäre so manches Projekt nur ein Traum geblieben!</p>
+
+  @if (loading) {
+    <div class="loading-message">Loading...</div>
+  }
+  @if (error) {
+    <div class="error-message">{{ error }}</div>
+  }
+
+  @if (!loading && !error && sponsorLogos.length > 0) {
+    <div class="sponsor-logos-grid">
+      @for (logo of sponsorLogos; track logo.imageUrl) {
+        <div class="sponsor-logo-item">
+          <img [src]="logo.imageUrl" [alt]="logo.alt" />
+        </div>
+      }
+    </div>
+  }
+
+  <div class="spacer-invisible-80px"></div>
+  <h2>NOTENSPONSOREN</h2>
+  <p>
+    DA wir gerne immer wieder neue Stücke einstudieren und diese Noten entsprechend beschaffen
+    müssen, fallen immer wieder Kosten an. Folgende Personen & Unternehmen sorgen für frische
+    Melodien in unseren Mappen:
+  </p>
+
+  @if (!loading && !error && notenSponsorenList.length > 0) {
+    <ul class="noten-sponsoren-list">
+      @for (sponsor of notenSponsorenList; track sponsor) {
+        <li>{{ sponsor }}</li>
+      }
+    </ul>
+  }
+
+</div>

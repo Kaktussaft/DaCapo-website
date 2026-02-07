@@ -1,6 +1,30 @@
-  <app-navigation [showLogo]="true"></app-navigation>
-  <div class="content-container">
-    <h1>Bildergalerie</h1>
-    <h1>PROBENWOCHENDE 2025</h1>
-    <h1>VOICES OF SPIRIT</h1>
-  </div>
+<app-navigation [showLogo]="true"></app-navigation>
+<div class="content-container">
+  <h1>Bildergalerie</h1>
+
+  @if (loading()) {
+    <div class="loading">Lädt...</div>
+  }
+
+  @if (error()) {
+    <div class="error">{{ error() }}</div>
+  }
+
+  @for (gallery of galleries(); track gallery.documentId) {
+    <section class="gallery-section">
+      <h2>{{ gallery.Titel }}</h2>
+      <p class="location-date">{{ gallery.Location_Datum }}</p>
+      <div class="gallery-grid">
+        @for (image of gallery.Bilder; track image.url) {
+          <div class="gallery-item">
+            <img
+              [src]="image.url"
+              [alt]="image.alternativeText"
+              loading="lazy"
+            />
+          </div>
+        }
+      </div>
+    </section>
+  }
+</div>
