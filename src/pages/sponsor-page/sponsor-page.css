@@ -1,0 +1,38 @@
+.grid-25-25-25-25 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 90%;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1400px) {
+  .logo {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid-25-25-25-25 {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (max-width: 600px) {
+  .grid-25-25-25-25 {
+    grid-template-columns: 100%;
+  }
+}
