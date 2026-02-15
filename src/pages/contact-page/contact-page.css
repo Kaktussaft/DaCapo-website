@@ -19,6 +19,7 @@
 
 .image-large {
   width: 100%;
+  margin-top:5px;
   height: auto;
   max-width: 100px;
   border-radius: 8px;
