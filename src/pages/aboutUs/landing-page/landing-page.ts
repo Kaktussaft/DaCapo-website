@@ -11,6 +11,6 @@ export class LandingPage {
   carouselItems: CarouselItem[] = [
     { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo 2025' },
     { imageUrl: 'assets/images/2025_probenwochenende.jpg', alt: 'Da Capo Concert' },
-    { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo Performance' },
+    { imageUrl: 'assets/images/Lingenheel2.jpg', alt: 'Lingenheel' },
   ];
 }
