@@ -6,6 +6,7 @@
 
 .large {
   font-size: large;
+  margin: 5px;
 }
 
 .spacer {
@@ -56,6 +57,7 @@
 
 .landingPage-header .group h1 {
   margin-top: -10px;
+  margin-bottom: -10px;
 }
 .landing-page-image {
   width: 100%;
