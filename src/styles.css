@@ -33,6 +33,13 @@ body {
   align-items: start;
 }
 
+.grid-25-25-25-25-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
 .grid-25-75 {
   display: grid;
   grid-template-columns: 25% 75%;
