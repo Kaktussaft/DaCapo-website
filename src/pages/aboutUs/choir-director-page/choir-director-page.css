@@ -1,4 +1,5 @@
 .grid-70-30 {
     display: grid;
     grid-template-columns: 70% 30%;
+   width: 800px
 }
