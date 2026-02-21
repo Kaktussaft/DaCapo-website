@@ -4,8 +4,10 @@ html {
 
 body {
   margin: 0px;
+  height: 100%;
   overflow-x: hidden !important;
-  }
+}
+
 .content-container {
   margin: 20px auto;
   width: 80%;
