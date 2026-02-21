@@ -1,6 +1,5 @@
-  <app-navigation [showLogo]="true"></app-navigation>
-  <div class="content-container">
-    <h1>Termine</h1>
+<app-navigation [showLogo]="true"></app-navigation>
+<div class="content-container">
   <h1>Terminplan 2025/2026</h1>
 
   <div class="pdf-controls">
@@ -9,14 +8,15 @@
     </button>
   </div>
 
-    <div class="pdf-container">
-      <pdf-viewer
-        [src]="pdfSrc"
-        [render-text]="true"
-        [original-size]="false"
-        [fit-to-page]="true"
-        [show-all]="true"
-        class="pdf-viewer">
-      </pdf-viewer>
-    </div>
+  <div class="pdf-container">
+    <pdf-viewer
+      [src]="pdfSrc"
+      [render-text]="true"
+      [original-size]="false"
+      [fit-to-page]="true"
+      [show-all]="true"
+      class="pdf-viewer">
+    </pdf-viewer>
+  </div>
+  <div class="spacer-invisible-40px"></div>
 </div>

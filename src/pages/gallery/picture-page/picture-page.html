@@ -1,22 +1,21 @@
-  <app-navigation [showLogo]="true"></app-navigation>
-  <div class="content-container">
-    <h1>Bildergalerie</h1>
+<app-navigation [showLogo]="true"></app-navigation>
+<div class="content-container">
+  <h1>Bildergalerie</h1>
 
-    <h1>Tag der Chöre</h1>
+  @for (gallery of galleries; track gallery.title) {
+    <div class="spacer-invisible-40px"></div>
+    <h2>{{ gallery.title }}</h2>
     <div class="grid-25-25-25-25-columns width-80">
-      <div class="image-column">
-        <img class="image-large" src="assets/images/Tag_der_chöre/IMG_7375.JPG" alt="Tag der Chöre 1" />
-      </div>
-      <div class="image-column">
-        <img class="image-large" src="assets/images/Tag_der_chöre/IMG_7377.JPG" alt="Tag der Chöre 2" />
-      </div>
-      <div class="image-column">
-        <img class="image-large" src="assets/images/Tag_der_chöre/IMG_7378.JPG" alt="Tag der Chöre 3" />
-      </div>
-      <div class="image-column">
-        <img class="image-large" src="assets/images/Tag_der_chöre/IMG_7388.JPG" alt="Tag der Chöre 4" />
-      </div>
-
+      @for (image of gallery.images; track image; let i = $index) {
+        <div class="image-column">
+          <img
+            class="image-large"
+            [src]="gallery.folderPath + image"
+            [alt]="gallery.title + ' ' + (i + 1)"
+          />
+        </div>
+      }
     </div>
-    <h1>Voices of Spirit</h1>
-  </div>
+  }
+
+</div>
