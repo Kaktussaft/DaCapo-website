@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationComponent } from "../../../components/navigation/navigation";
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { CollapsibleTextSection } from '../../../components/collapsible-text-section/collapsible-text-section';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,17 +11,29 @@ import { CollapsibleTextSection } from '../../../components/collapsible-text-sec
   templateUrl: './report-page.html',
   styleUrl: './report-page.css'
 })
-export class ReportPage {
+export class ReportPage implements OnInit {
   expandedSections: { [key: string]: boolean } = {
     'probenwochenende2025': false,
-    'voicesOfSpirit': false
+    'voicesOfSpirit': false,
+    'hoffest2025': false
   };
 
-  toggleSection(sectionKey: string): void {
-    this.expandedSections[sectionKey] = !this.expandedSections[sectionKey];
-  }
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly viewportScroller: ViewportScroller
+  ) {}
 
-  isExpanded(sectionKey: string): boolean {
-    return this.expandedSections[sectionKey];
+  ngOnInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        // Expand the section
+        this.expandedSections[fragment] = true;
+
+        // Scroll to the fragment after a short delay to ensure DOM is updated
+        setTimeout(() => {
+          this.viewportScroller.scrollToAnchor(fragment);
+        }, 100);
+      }
+    });
   }
 }

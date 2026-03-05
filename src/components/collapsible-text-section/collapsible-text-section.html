@@ -3,11 +3,11 @@
   @if (date()) {
     <p class="date">{{ date() }}</p>
   }
-  <div class="text-content" [ngClass]="isExpanded ? 'expanded' : 'collapsed'">
+  <div class="text-content" [ngClass]="isExpanded() ? 'expanded' : 'collapsed'">
     <ng-content></ng-content>
   </div>
   <button class="expand-button" (click)="toggleSection()">
-    <span>{{ isExpanded ? 'Weniger anzeigen' : 'Mehr lesen' }}</span>
-    <span class="arrow" [ngClass]="isExpanded ? 'up' : 'down'">▼</span>
+    <span>{{ isExpanded() ? 'Weniger anzeigen' : 'Mehr lesen' }}</span>
+    <span class="arrow" [ngClass]="isExpanded() ? 'up' : 'down'">▼</span>
   </button>
 </div>

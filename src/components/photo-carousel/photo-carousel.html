@@ -5,7 +5,13 @@
       <div [class]="'carousel-item carousel-item-' + visibleItem.position"
            [class.carousel-item-center]="visibleItem.position === 'center'"
            (click)="visibleItem.position !== 'center' && (visibleItem.position === 'left' ? previous() : next())">
-        <img [src]="visibleItem.item.imageUrl" [alt]="visibleItem.item.alt" />
+        @if (visibleItem.item.link && visibleItem.position === 'center') {
+          <a [routerLink]="[visibleItem.item.link.split('#')[0]]" [fragment]="visibleItem.item.link.split('#')[1]">
+            <img [src]="visibleItem.item.imageUrl" [alt]="visibleItem.item.alt" />
+          </a>
+        } @else {
+          <img [src]="visibleItem.item.imageUrl" [alt]="visibleItem.item.alt" />
+        }
       </div>
     }
   </div>

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,10 +14,10 @@ export class CollapsibleTextSection {
   imageAlt = input<string>('Image');
   sectionKey = input.required<string>();
 
-  // State
-  isExpanded = false;
+  // Two-way binding for expanded state
+  isExpanded = model<boolean>(false);
 
   toggleSection(): void {
-    this.isExpanded = !this.isExpanded;
+    this.isExpanded.set(!this.isExpanded());
   }
 }

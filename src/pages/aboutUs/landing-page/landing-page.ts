@@ -9,8 +9,8 @@ import { PhotoCarouselComponent, CarouselItem } from "../../../components/photo-
 })
 export class LandingPage {
   carouselItems: CarouselItem[] = [
-    { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo 2025' },
-    { imageUrl: 'assets/images/2025_probenwochenende.jpg', alt: 'Da Capo Concert' },
-    { imageUrl: 'assets/images/Lingenheel2.jpg', alt: 'Lingenheel' },
+    { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo 2025', link: '/Berichte#voicesOfSpirit' },
+    { imageUrl: 'assets/images/2025_probenwochenende.jpg', alt: 'Da Capo Concert', link: '/Berichte#probenwochenende2025' },
+    { imageUrl: 'assets/images/Lingenheel2.jpg', alt: 'Lingenheel', link: '/Berichte#hoffest2025' },
   ];
 }
