@@ -62,7 +62,7 @@ h3.h3-blue-white {
   font-weight: bold !important;
   padding: 4px 10px;
   display: inline-block;
-  font-size: 24px !important;
+  font-size: 24px;
   line-height: 2;
 }
 
@@ -77,31 +77,6 @@ h3.h3-blue-white {
   overflow: hidden;
 }
 
-
-/*************************************************
-****************Responsive Design*****************
-*************************************************/
-
-@media (max-width: 1024px) {
-  .four-column-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .four-column-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .image-column {
-    order: -1;
-  }
-}
-
-/* Contact Form Styles */
 .contact-form {
   max-width: 600px;
   width: 100%;
@@ -156,3 +131,36 @@ h3.h3-blue-white {
 .submit-button:active {
   transform: translateY(0);
 }
+
+/*************************************************
+****************Responsive Design*****************
+*************************************************/
+
+@media (max-width: 1024px) {
+  .four-column-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+   h3.h3-blue-white {
+    font-size: 18px ;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .four-column-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-column {
+    order: -1;
+  }
+
+  .image-large {
+    max-width: 80%;
+  }
+}
+
+

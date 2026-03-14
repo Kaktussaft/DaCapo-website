@@ -26,11 +26,17 @@
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .role-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.2rem;
+  }
+
+    .grid-50-50-columns {
+    display: grid ;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto ;
   }
 
   .role-item .name {

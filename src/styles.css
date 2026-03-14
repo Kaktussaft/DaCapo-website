@@ -138,9 +138,9 @@ h3 {
 
 @media (max-width: 768px) {
   .grid-50-50-columns {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto !important;
+    display: grid ;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto ;
   }
     .grid-25-75 {
     grid-template-columns: 1fr;
