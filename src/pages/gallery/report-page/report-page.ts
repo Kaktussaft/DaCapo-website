@@ -13,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ReportPage implements OnInit {
   expandedSections: { [key: string]: boolean } = {
+    'konzertlingenau2026': false,
     'probenwochenende2025': false,
     'voicesOfSpirit': false,
     'hoffest2025': false
