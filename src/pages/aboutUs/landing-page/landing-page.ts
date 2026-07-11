@@ -12,5 +12,7 @@ export class LandingPage {
     { imageUrl: 'assets/images/2025_dacapo.jpg', alt: 'Da Capo 2025', link: '/Berichte#voicesOfSpirit' },
     { imageUrl: 'assets/images/2025_probenwochenende.jpg', alt: 'Da Capo Concert', link: '/Berichte#probenwochenende2025' },
     { imageUrl: 'assets/images/Lingenheel2.jpg', alt: 'Lingenheel', link: '/Berichte#hoffest2025' },
+    { imageUrl: 'assets/images/IMG_1009.jpg', alt: 'Konzert Lingenau 2026', link: '/Berichte#konzertlingenau2026' },
+    { imageUrl: 'assets/images/IMG_4273.JPG', alt: 'Belgien 2026', link: '/Berichte#konzertlingenau2026' }
   ];
 }

@@ -79,5 +79,29 @@ export class PicturePage {
         '4A7A0740.jpg',
       ],
     },
+    {
+      title: 'Some Nights',
+      folderPath: 'assets/images/SomeNights2026/',
+      images: [
+        'IMG_1004.jpg',
+        'IMG_1009.jpg',
+        'IMG_3544.JPG',
+        'IMG_3564.JPG',
+        'IMG_3624.JPG',
+      ],
+    },
+    {
+      title: 'Belgien 2026',
+      folderPath: 'assets/images/Belgien2026/',
+      images: [
+        '4275.jpg',
+        '4276.jpg',
+        '4277.jpg',
+        'IMG_3082.jpg',
+        'IMG_3361.jpg',
+        'IMG_4273.JPG',
+        'IMG_4274.JPG',
+      ],
+    },
   ];
 }
