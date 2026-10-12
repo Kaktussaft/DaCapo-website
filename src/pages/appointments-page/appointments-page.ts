@@ -10,7 +10,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   styleUrl: './appointments-page.css',
 })
 export class AppointmentsPage {
-  pdfSrc = 'assets/documents/probenplan da capo 202526.pdf';
+  pdfSrc = 'assets/documents/probenplan da capo 202627.pdf';
   showPdfViewer = false;
 
   togglePdfViewer() {
@@ -20,7 +20,7 @@ export class AppointmentsPage {
   downloadPdf() {
     const link = document.createElement('a');
     link.href = this.pdfSrc;
-    link.download = 'Probenplan Da Capo 2025-26.pdf';
+    link.download = 'probenplan da capo 202627.pdf';
     link.click();
   }
 }
