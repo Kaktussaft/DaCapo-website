@@ -74,6 +74,30 @@
   align-items: center;
 }
 
+.pdf-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.pdf-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Bettina Signature', cursive;
+}
+
+.download-button {
+  background-color: #283A8D;
+  color: white;
+}
+
+
 /*************************************************
 ****************Responsive Design*****************
 *************************************************/
